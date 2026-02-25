@@ -32,158 +32,43 @@ Telecommunications
 
 ## 📂 Project Structure
 ```
-# 📉 Customer Churn Prediction
-
-<div align="center">
-
-![Python](https://img.shields.io/badge/Python-3.8+-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![Scikit-learn](https://img.shields.io/badge/Scikit--learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white)
-![Jupyter](https://img.shields.io/badge/Jupyter-F37626?style=for-the-badge&logo=jupyter&logoColor=white)
-![Pandas](https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)
-![Status](https://img.shields.io/badge/Status-Completed-22c55e?style=for-the-badge)
-
-**Predicting which telecom customers are likely to leave — before they do.**
-
-*Built during AI & ML Internship @ InLighnX Global Pvt. Ltd.*
-
-</div>
-
----
-
-## 🎯 Problem Statement
-
-Customer churn is one of the most expensive problems in the telecom industry. Acquiring a new customer costs **5–7x more** than retaining an existing one. This project builds a machine learning pipeline to predict churn with high accuracy — helping businesses act before it's too late.
-
----
-
-## 📁 Project Structure
-
-```
-Customer-Churn-Prediction/
- ┣ 📓 Customer_Churn_Prediction.ipynb       # Main notebook (end-to-end pipeline)
- ┣ 📊 WA_Fn-UseC_-Telco-Customer-Churn.csv  # Telco customer dataset (IBM)
+📦 Customer-Churn-Prediction
+ ┣ 📓 Customer_Churn_Prediction.ipynb       # Main notebook
+ ┣ 📊 WA_Fn-UseC_-Telco-Customer-Churn.csv  # Dataset
  ┗ 📄 README.md                             # Project documentation
 ```
 
 ---
 
-## 🔄 Pipeline Overview
-
-```
-Raw Data → Cleaning & Encoding → EDA → Model Training → Tuning → Evaluation → Prediction
-```
+## 📋 Project Steps
 
 | Step | Description |
 |------|-------------|
-| 1️⃣ | Import Libraries |
-| 2️⃣ | Load & Inspect Dataset |
-| 3️⃣ | Clean & Encode Data |
-| 4️⃣ | Exploratory Data Analysis (EDA) |
-| 5️⃣ | Train Decision Tree & Gradient Boosting |
-| 6️⃣ | Hyperparameter Tuning (GridSearchCV) |
-| 7️⃣ | Model Evaluation — Confusion Matrix + ROC Curve |
-| 8️⃣ | Feature Importance Visualization |
-| 9️⃣ | Predict Single Customer Churn |
+| 1 | Import Libraries |
+| 2 | Load Dataset |
+| 3 | Clean & Encode Data |
+| 4 | Exploratory Data Analysis (EDA) |
+| 5 | Train Decision Tree & Gradient Boosting |
+| 6 | Hyperparameter Tuning (GridSearchCV) |
+| 7 | Model Evaluation (Confusion Matrix + ROC Curve) |
+| 8 | Feature Importance Plot |
+| 9 | Predict Single Customer Churn |
 
 ---
 
-## 📊 Dataset
-
-- **Source:** IBM Telco Customer Churn Dataset
-- **Records:** 7,043 customers
-- **Features:** 21 columns including demographics, services, and billing info
-- **Target:** `Churn` — Yes / No
-
-| Feature Type | Examples |
-|---|---|
-| Demographics | `gender`, `SeniorCitizen`, `Partner`, `Dependents` |
-| Services | `InternetService`, `StreamingTV`, `TechSupport` |
-| Billing | `Contract`, `PaymentMethod`, `MonthlyCharges`, `TotalCharges` |
-| Target | `Churn` |
-
----
-
-## 🤖 Models Used
-
-### 1. Decision Tree Classifier
-- Baseline model for interpretability
-- Clear decision boundaries
-- Prone to overfitting without tuning
-
-### 2. Gradient Boosting Classifier ✅ *(Best Model)*
-- Ensemble of weak learners built sequentially
-- Handles imbalanced data better
-- Tuned with GridSearchCV for optimal hyperparameters
+## 📈 Models Used
+- **Decision Tree Classifier**
+- **Gradient Boosting Classifier** ✅ *(Best Model)*
 
 ---
 
 ## 🎯 Key Results
-
-| Metric | Score |
-|--------|-------|
-| ROC AUC Score | **High** |
-| Precision | ✅ Optimized |
-| Recall | ✅ Optimized |
-| F1-Score | ✅ Optimized |
-
-> Best model selected via **GridSearchCV** with 5-fold cross-validation
+- Model evaluated using **ROC AUC Score**, **Precision**, **Recall**, and **F1-Score**
+- Top features identified: `tenure`, `MonthlyCharges`, `Contract type`, `Total charges`
+- Best model selected via **GridSearchCV** with cross-validation
 
 ---
 
-## 🔍 Top Predictive Features
-
-```
-1. 📅 tenure            — How long the customer has stayed
-2. 💰 MonthlyCharges    — Higher charges = higher churn risk
-3. 📄 Contract Type     — Month-to-month contracts churn more
-4. 💳 TotalCharges      — Cumulative spend indicator
-```
-
----
-
-## 🚀 How to Run
-
-```bash
-# 1. Clone the repository
-git clone https://github.com/Hrprasith/Customer-Churn-Prediction
-
-# 2. Install dependencies
-pip install pandas numpy scikit-learn matplotlib seaborn jupyter
-
-# 3. Launch notebook
-jupyter notebook Customer_Churn_Prediction.ipynb
-```
-
----
-
-## 💡 Key Insights
-
-- Customers on **month-to-month contracts** churn at significantly higher rates
-- **New customers** (low tenure) are at highest risk — early engagement matters
-- **High monthly charges** without added-value services drive churn
-- **Electronic check** payment method correlates with higher churn
-
----
-
-## 👤 Author
-
-<div align="center">
-
-**HR Prasith**
-B.Tech — Artificial Intelligence & Machine Learning
-CMR University, Bangalore
-
-*AI & ML Intern — InLighnX Global Pvt. Ltd.*
-
-[![GitHub](https://img.shields.io/badge/GitHub-Hrprasith-181717?style=flat-square&logo=github)](https://github.com/Hrprasith)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-HrPrasith-0A66C2?style=flat-square&logo=linkedin)](https://linkedin.com/in/HrPrasith)
-[![Email](https://img.shields.io/badge/Email-hr.prasith28@gmail.com-EA4335?style=flat-square&logo=gmail)](mailto:hr.prasith28@gmail.com)
-
-</div>
-
----
-
-<div align="center">
-<sub>Built with ❤️ using Python & Scikit-learn</sub>
-</div>
-
+# 👤 Author
+**HR PRASITH**
+AI & ML Intern — InLighnX Global Pvt. Ltd.
