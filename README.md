@@ -36,31 +36,11 @@ Telecommunications
  ┣ 📓 Customer_Churn_Prediction.ipynb   # Main notebook
  ┣ 📊 WA_Fn-UseC_-Telco-Customer-Churn.csv  # Dataset
  ┗ 📄 README.md                         # Project documentation
-```
 
 ---
 
-## 🚀 How to Run
-
-### 1. Clone or Download the project files
-
-### 2. Install required libraries
-Open terminal and run:
-```bash
-python -m pip install pandas numpy matplotlib seaborn scikit-learn
-```
-
-### 3. Open the notebook
-```bash
-jupyter notebook Customer_Churn_Prediction.ipynb
-```
-Or open directly in **VS Code**
-
-### 4. Run all cells top to bottom ▶️
-
-> ⚠️ Make sure the CSV file is in the **same folder** as the notebook!
-
 ---
+
 
 ## 📋 Project Steps
 
